@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyface - Web Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Mobile.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Bebas+Neue&family=Michroma&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Saeed</span>
+                <span class="logo-text">S</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
+                    <i class="fa-solid fa-house"></i>
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                    <i class="fa-solid fa-address-card"></i>
                     <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
+                    <i class="fa-solid fa-code"></i>
                     <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#work" class="nav-link">Work</a>
+                    <i class="fa-solid fa-laptop"></i>
+                    <a href="#work" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Connect</a>
+                    <i class="fa-solid fa-comments fa-beat-fade"></i>
+                    <a href="#contacts" class="nav-link">Connect</a>
                 </li>
             </ul>
             <div class="nav-toggle" id="nav-toggle">
@@ -40,21 +51,51 @@
         </div>
     </nav>
 
+    <!-- Mobile navigation -->
+      <div class="menu-container" id="menu">
+        <div class="menu-button">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/menu.png" alt="Menu">
+            <span>menu</span>
+        </div>
+        <div class="menu-items">
+            <a href="#skills" id="item1">
+            <i class="fa-solid fa-code"></i>
+                <span>Skills</span>
+            </a>
+            <a href="#contacts" id="item2">
+                <i class="fa-solid fa-comments fa-beat-fade" style="color: #63E6BE;"></i>
+                <span>Chat</span>
+            </a>
+            <a href="#" id="item3">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/about.png" alt="About" width="24">
+                <span>About</span>
+            </a>
+            <a href="#" id="item4">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/like.png" alt="Wishlist" width="24">
+                <span>Wishlist</span>
+            </a>
+        </div>
+        <div class="home-text" id="selected-name">Home</div>
+    </div>
+
+
+
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" class="hero-container">
+        <div class="hero-badge">Available for work</div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">Available for work</div>
                 <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Abubakar</span>
+                    Hi, I'm <span class="highlight">Qodifies</span>
                 </h1>
                 <p class="hero-subtitle">
                     Web Developer crafting beautiful digital experiences withwidly used technologies.
                 </p>
-                <div class="hero-buttons">
+               <!-- <div class="hero-buttons">
                     <a href="#contact" id="contact" class="btn btn-primary">Get In Touch</a>
                     <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
+                </div>  -->
             </div>
             <div class="hero-image">
                 <div class="floating-card">
@@ -71,7 +112,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-stats">
-                    <div class="stat-card">
+                    <div id="stat-card1" class="stat-card">
                         <h3>1+</h3>
                         <p>Year of Experience</p>
                     </div>
@@ -112,7 +153,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://i.postimg.cc/8z2V6ZNF/PXL-20250309-162054080-PORTRAIT-2.jpg" alt="About me" />
+                    <img src="assets/images/About-photo.png" alt="About me" />
                 </div>
             </div>
         </div>
@@ -121,7 +162,7 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" contenteditable="true">Skills & Expertise</h2>
+            <h2 class="section-title">Skills & Expertise</h2>
 
             <div class="skills-content">
                 <div class="technical-skills">
@@ -310,7 +351,7 @@
             <div class="projects-grid">
                 <div class="project-card" data-project="ecommerce">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop" alt="E-Commerce Platform">
+                        <img src="assets/images/E-commerce-flyer.jpg" alt="E-Commerce Platform">
                         <div class="project-overlay">
                             <button class="view-project-btn">
                                 <i class="fas fa-eye"></i>
@@ -326,7 +367,7 @@
 
                 <div class="project-card" data-project="portfolio">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Portfolio Website">
+                        <img src="assets/images/food-thumbnail.png" alt="Portfolio Website">
                         <div class="project-overlay">
                             <button class="view-project-btn">
                                 <i class="fas fa-eye"></i>
@@ -342,7 +383,7 @@
 
                 <div class="project-card" data-project="mobile-ui">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop" alt="Mobile App UI">
+                        <img src="assets/images/e-commerce-thumbnail.png" alt="Mobile App UI">
                         <div class="project-overlay">
                             <button class="view-project-btn">
                                 <i class="fas fa-eye"></i>
@@ -408,7 +449,7 @@
     </section>
     
     <!-- Featured Dev. Section -->
-    <section class="featured">
+   <!-- <section class="featured">
         <div class="container">
             <h2 class="section-title">Featured Developers</h2>
             <p class="section-discription">
@@ -430,10 +471,10 @@
            
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Social Media Section -->
-    <section id="contact" class="social-media">
+    <section id="contacts" class="social-media">
         <div class="container">
             <h2 class="section-title">Connect With Me</h2>
             <div class="social-content">
@@ -484,11 +525,13 @@
                         <h4>Technologies Used:</h4>
                         <div id="modalTechnologies"></div>
                     </div>
+                    <button id="modalLiveDemo" class="btn btn-primary">Live Demo</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+     <script src="Mobile.js"></script>
 </body>
 </html>

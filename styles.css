@@ -30,9 +30,10 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: var(--text-primary);
+    color:var(--text-primary);
     background: var(--background-light);
     overflow-x: hidden;
+    margin: 0;
 }
 
 html {
@@ -48,62 +49,105 @@ html {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 10px;
-    width: 100%;
+    display: grid;
+    top: 20px;
+    height: 80vh;
+    right: 4%;
+   
+    width: 7%;
     background: rgba(255, 255, 255, 0);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(229, 231, 235, 0.5);
     z-index: 1000;
     transition: var(--transition);
-    border-radius: 25px;
+    border-radius: 40px;
+    box-shadow: inset 5px 5px 15px white, inset -5px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
+
+    * {
+         overflow-x: auto;
+    }
+    
 }
 
 .navbar.scrolled {
     
-    box-shadow: var(--shadow-md);
+    box-shadow: inset 5px 5px 15px white, inset -5px -5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
-    max-width: 1200px;
+    /* Keep grid layout but ensure items stack neatly and are vertically centered
+       within the tall .navbar. Use align-content to center the grid rows and
+       a small gap to reduce spacing between logo and menu. */
     margin: 0 auto;
-    padding: 0 20px;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 0.5rem;
+    justify-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.nav-logo {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 70px;
+    text-align: center;
+    top: 2%;
+    border: 5px solid var(--primary-color);
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: clamp(3.5rem, 90%, 4rem);
     font-weight: 700;
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    
 }
 
 .nav-menu {
-    display: flex;
+    display: grid;
     list-style: none;
-    gap: 2rem;
+    gap: 7%;
+   justify-content: end;
 }
 
 .nav-item{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 20px;
     box-shadow: 1px 2px 13px rgb(172, 172, 172);
     padding: 3px 10px;
     font-weight: bolder;
-    border: 1px solid var(--primary-color);
+    display: grid;
+    justify-items: center;
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 900;
     transition: var(--transition);
     position: relative;
+    font-size: 1rem;
+}
+
+.fa-solid {
+    color: var(--primary-color);
 }
 
 .nav-link:hover {
@@ -145,21 +189,29 @@ html {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #3a3a3a 0%, #fdfdfd 100%);
     position: relative;
     overflow: hidden;
     border-radius: 0px 0px 35px 35px;
 }
 
+ 
+.menu-container {
+            display: none;
+}
+
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.5;
+     content: '';
+     position: absolute;
+     inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1094" height="643" viewBox="0 0 1094 643" fill="none"><rect width="1094" height="643" fill="%239A9A9A"/><rect width="1618" height="863" transform="translate(-194 -32)" fill="white"/><path d="M377.3 0C388.712 4.37552e-07 397.997 9.10658 398.284 20.4492L398.298 21.5332C398.585 32.8758 407.87 41.9824 419.282 41.9824H588.404C599.816 41.9824 609.101 32.8758 609.389 21.5332L609.402 20.4492C609.69 9.10658 618.975 0 630.387 0H1094V620C1094 632.703 1083.7 643 1071 643H23C10.2975 643 0 632.703 0 620V0H377.3Z" fill="url(%23paint0_linear_0_1)"/><defs><linearGradient id="paint0_linear_0_1" x1="547" y1="0" x2="547" y2="643" gradientUnits="userSpaceOnUse"><stop stop-color="%235D5C50"/><stop offset="0.860577" stop-color="%23121212" stop-opacity="0.139423"/><stop offset="0.927885" stop-opacity="0.0721154"/><stop offset="1" stop-opacity="0"/></linearGradient></defs></svg>');
+background-repeat: no-repeat;
+/* Make width scale to hero width and align top center so shape stays at top-middle
+    while preserving aspect ratio */
+background-size: 100% auto;
+background-position: top center;
+pointer-events: none;
+height: 100vh;
 }
 
 .hero-container {
@@ -171,10 +223,13 @@ html {
     gap: 4rem;
     align-items: center;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 .hero-badge {
+    position: absolute;
+    top: calc(1% - 2px);
+    left: 40%;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -185,19 +240,23 @@ html {
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .hero-badge::before {
     content: '';
-    width: 8px;
-    height: 8px;
-    background: rgb(0, 255, 0);
+    width: 18px;
+    height: 18px;
+    background: rgb(0, 207, 28);
     border-radius: 50%;
     animation: pulse 2s infinite;
 }
 
 .hero-title {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    padding: 5px;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
@@ -205,16 +264,17 @@ html {
 }
 
 .highlight {
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-style: italic;
+    padding-right: 10px;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--white);
     margin-bottom: 2.5rem;
     max-width: 500px;
 }
@@ -264,11 +324,12 @@ html {
 .floating-card {
     background: #111827;
     padding: 2rem;
+    left: 0;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-xl);
     animation: float 6s ease-in-out infinite;
     position: relative;
-    clip-path: path("M 0,0 L 500,0 L 500,193 L 140,193 A 10 20 0 0 1 130,183 L 130,163 A 10 10 0 0 0 120,153 L 10,153 A 10 10 0 0 1 0,143 Z");
+    width: 80%;
 
 }
 
@@ -335,6 +396,7 @@ html {
 }
 
 .section-title {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
@@ -343,12 +405,14 @@ html {
 }
 
 .about-text h3 {
+    font-family: "Michroma", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .about-text p {
+    font-family: "Roboto Slab", serif;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.7;
@@ -785,8 +849,8 @@ html {
     padding: 0;
     border-radius: var(--border-radius-lg);
     width: 90%;
-    max-width: 800px;
-    max-height: 80vh;
+    max-width: 1100px;
+    max-height: 70vh;
     overflow: hidden;
     position: relative;
     animation: modalSlideIn 0.3s ease-out;
@@ -832,6 +896,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 400px;
 }
 
 .modal-info h3 {
@@ -1054,11 +1119,7 @@ html {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
+
 
     .about-content {
         grid-template-columns: 1fr;
@@ -1087,7 +1148,7 @@ html {
     .nav-menu {
         position: fixed;
         left: 100%;
-        top: 70px;
+       
         flex-direction: column;
         background: var(--white);
         width: 80%;
@@ -1162,6 +1223,7 @@ html {
     .modal-content {
         width: 95%;
         margin: 10% auto;
+        max-height: 95vh;
     }
 
     .container {
