@@ -65,32 +65,38 @@ document.addEventListener('DOMContentLoaded', function() {
         'ecommerce': {
             title: 'E-Commerce Platform',
             description: 'A modern e-commerce platform built with cutting-edge technologies. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard. The platform is fully responsive and optimized for performance with server-side rendering and progressive web app capabilities.',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux', 'Express']
+            technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux', 'Express'],
+            demoLink: 'https://my-test2.42web.io/'
         },
         'portfolio': {
             title: 'Portfolio Website',
             description: 'A creative portfolio website showcasing modern web development techniques. Built with performance and accessibility in mind, featuring smooth animations, responsive design, and optimized loading times. Includes dark mode toggle, contact forms, and blog functionality.',
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Webpack', 'Sass']
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Webpack', 'Sass'],
+            demoLink: 'https://qodifies.github.io/Qodifies-food/'
         },
         'mobile-ui': {
             title: 'Mobile App UI',
             description: 'Intuitive mobile application user interface design and development. Features include gesture-based navigation, custom animations, offline functionality, and seamless user experience across different devices and screen sizes.',
-            technologies: ['React Native', 'TypeScript', 'Redux', 'Expo', 'Firebase', 'Jest']
+            technologies: ['React Native', 'TypeScript', 'Redux', 'Expo', 'Firebase', 'Jest'],
+            demoLink: 'https://mobile-ui-demo.mywebsite.com'
         },
         'dashboard': {
             title: 'Dashboard Design',
             description: 'A comprehensive data visualization dashboard for business analytics. Includes real-time data updates, interactive charts, filtering capabilities, export functions, and role-based access control. Built with scalability and performance in mind.',
-            technologies: ['Vue.js', 'D3.js', 'Chart.js', 'Node.js', 'PostgreSQL', 'Socket.io']
+            technologies: ['Vue.js', 'D3.js', 'Chart.js', 'Node.js', 'PostgreSQL', 'Socket.io'],
+            demoLink: 'https://dashboard-demo.mywebsite.com'
         },
         'landing': {
             title: 'Landing Page',
             description: 'High-converting landing page optimized for lead generation and conversions. Features A/B testing capabilities, analytics integration, form validation, and performance optimization. Designed with modern UX principles and conversion rate optimization.',
-            technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Google Analytics', 'Mailchimp', 'Vercel']
+            technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Google Analytics', 'Mailchimp', 'Vercel'],
+            demoLink: 'https://landing-demo.mywebsite.com'
         },
         'webapp': {
             title: 'Web Application',
             description: 'Full-stack web application with comprehensive functionality including user management, real-time features, API integrations, and scalable architecture. Built following best practices for security, performance, and maintainability.',
-            technologies: ['Angular', 'Python', 'Django', 'PostgreSQL', 'Redis', 'Docker']
+            technologies: ['Angular', 'Python', 'Django', 'PostgreSQL', 'Redis', 'Docker'],
+            demoLink: 'https://webapp-demo.mywebsite.com'
         }
     };
 
@@ -105,6 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalImage.src = imageSrc;
                 modalTitle.textContent = project.title;
                 modalDescription.textContent = project.description;
+                
+                // Update the live demo link
+                const modalLiveDemo = document.getElementById('modalLiveDemo');
+                if (modalLiveDemo && project.demoLink) {
+                    modalLiveDemo.href = project.demoLink;
+                }
                 
                 // Clear and populate technologies
                 modalTechnologies.innerHTML = '';

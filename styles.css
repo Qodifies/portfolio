@@ -71,7 +71,7 @@ html {
     }
 
     * {
-         overflow-x: auto;
+         overflow-x: hidden;
     }
     
 }
@@ -147,7 +147,7 @@ html {
 }
 
 .fa-solid {
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 .nav-link:hover {
@@ -402,6 +402,16 @@ height: 100vh;
     font-weight: 700;
     margin-bottom: 3rem;
     text-align: center;
+}
+
+.section-tittle::before {
+    content: '';
+    background-image: url(assets/SVGs/Section-BG.svg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }
 
 .about-text h3 {
@@ -937,7 +947,7 @@ height: 100vh;
 /* Animations */
 @keyframes pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    50% { opacity: 0.1; }
 }
 
 @keyframes float {
