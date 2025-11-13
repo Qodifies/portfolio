@@ -146,6 +146,10 @@ html {
     font-size: 1rem;
 }
 
+.nav-menu .fa-solid {
+    color: black;
+}
+
 .fa-solid {
     color: var(--white);
 }
@@ -376,7 +380,7 @@ height: 100vh;
 .stat-card {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: var(--gradient-primary);
     border-radius: var(--border-radius-lg);
     border: 1px solid rgba(229, 231, 235, 0.5);
 }
@@ -384,7 +388,7 @@ height: 100vh;
 .stat-card h3 {
     font-size: 3rem;
     font-weight: 700;
-    background: var(--gradient-primary);
+    background: var(--white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -392,27 +396,35 @@ height: 100vh;
 }
 
 .stat-card p {
-    color: var(--text-secondary);
+    color: var(--white);
     font-weight: 500;
 }
 
 .section-title {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin:0 auto 3rem;
     text-align: center;
+    width: fit-content;
+     background-image: url(assets/SVGs/brush.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.5rem;
+    color: black;
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+   
 }
 
-.section-tittle::before {
+/* .section-title::before {
     content: '';
-    background-image: url(assets/SVGs/Section-BG.svg) ;
+    background-image: url(assets/SVGs/brush.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-}
+} */
 
 .about-text h3 {
     font-family: "Michroma", sans-serif;
@@ -592,7 +604,7 @@ height: 100vh;
 
 .fullstack-section {
     background: var(--white);
-    padding: 3rem;
+    padding: 1rem;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-lg);
 }
@@ -1143,6 +1155,7 @@ height: 100vh;
 
     .stack-grid {
         grid-template-columns: 1fr 1fr;
+        overflow: hidden
     }
 
     .modal-body {
@@ -1352,3 +1365,4 @@ img:hover {
 #modalLiveDemo {
     margin-top: 5px;
 }
+

@@ -30,6 +30,7 @@ body {
             z-index: 899;
             border-right: 4px dashed black;
             left: 1.5%;
+            overflow: hidden;
         }
 
         .logo-text {
@@ -51,6 +52,7 @@ body {
             justify-content: center;
             align-items: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 5px 5px 15px white, inset -5px -5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.5s ease;
             overflow: hidden;
             z-index: 99999;
@@ -131,7 +133,7 @@ body {
         }
 
         .menu-items a.active {
-            border: 3px solid #ffffff; /* Green circle indicator */
+            border: 3px solid #000000; /* Green circle indicator */
         }
 
         .menu-items a span {
