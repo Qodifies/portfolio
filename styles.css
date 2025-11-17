@@ -103,6 +103,7 @@ html {
     text-align: center;
     top: 2%;
     border: 5px solid var(--primary-color);
+    border-right: 5px dotted black;
     border-radius: 50%;
     height: 4.5rem;
     width: 4.5rem;

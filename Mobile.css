@@ -31,10 +31,11 @@ body {
             border-right: 4px dashed black;
             left: 1.5%;
             overflow: hidden;
+            text-decoration: none;
         }
 
         .logo-text {
-            
+            text-decoration: none;
         }
 
 

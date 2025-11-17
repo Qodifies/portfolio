@@ -65,20 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
         'ecommerce': {
             title: 'E-Commerce Platform',
             description: 'A modern e-commerce platform built with cutting-edge technologies. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard. The platform is fully responsive and optimized for performance with server-side rendering and progressive web app capabilities.',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux', 'Express'],
-            demoLink: 'https://my-test2.42web.io/'
+            technologies: ['Wordpress', 'Woocommerce', 'JavaScript', 'Custom CSS', 'Custom PHP',],
+            demoLink: 'https://plooma.unaux.com/'
         },
         'portfolio': {
-            title: 'Portfolio Website',
-            description: 'A creative portfolio website showcasing modern web development techniques. Built with performance and accessibility in mind, featuring smooth animations, responsive design, and optimized loading times. Includes dark mode toggle, contact forms, and blog functionality.',
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Webpack', 'Sass'],
+            title: 'Restaurant Website',
+            description: 'A beautifully crafted restaurant website designed to highlight modern web development techniques. Built for speed, accessibility, and an exceptional dining experience online. It features elegant food menu displays, smooth animations, mobile-friendly layouts, and fast loading times. The site includes an online reservation form, gallery section, chef highlights, etc.',
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'SVGs'],
             demoLink: 'https://qodifies.github.io/Qodifies-food/'
         },
         'mobile-ui': {
-            title: 'Mobile App UI',
-            description: 'Intuitive mobile application user interface design and development. Features include gesture-based navigation, custom animations, offline functionality, and seamless user experience across different devices and screen sizes.',
-            technologies: ['React Native', 'TypeScript', 'Redux', 'Expo', 'Firebase', 'Jest'],
-            demoLink: 'https://mobile-ui-demo.mywebsite.com'
+            title: 'Shoe Only E-commerce',
+            description: 'A modern and user-friendly shoe shopping website built to deliver a smooth and engaging online shopping experience. Features include clean product listings, dynamic filters, custom animations, responsive design, and fast performance across all devices. Includes an intuitive checkout flow, product zoom previews, size guides, and organized categories for easy navigation.',
+            technologies: ['Wordpress', 'Woocommerce', 'JavaScript', 'Custom CSS', 'Custom PHP'],
+            demoLink: 'https://my-test2.42web.io/'
         },
         'dashboard': {
             title: 'Dashboard Design',
